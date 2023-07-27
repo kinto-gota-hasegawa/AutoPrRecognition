@@ -20,6 +20,7 @@ jobs:
 
       - name: Create PR List text file
         run: |
+          chmod +x ./.github/shared/extract_pr_titles_and_links.sh
           ./.github/shared/extract_pr_titles_and_links.sh > git_log.txt
 
       - name: Publish Artifact
